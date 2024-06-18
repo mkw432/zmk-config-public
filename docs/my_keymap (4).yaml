@@ -1,0 +1,81 @@
+layout:
+  qmk_keyboard: ferris/sweep
+  qmk_layout: LAYOUT_split_3x5_2
+layers:
+  DEF:
+    - [Q, {h: TO1, t: W}, {h: TO2, t: E}, {h: TO3, t: R}, {h: TO0, t: T}, Y, U, I, O, P]
+    - [{h: Shift, t: A}, {h: Ctrl, t: S}, {h: Win, t: D}, {h: Alt, t: F}, G, H, {h: Alt, t: J}, {h: Win, t: K}, {h: Ctrl, t: L}, {h: Shift, t: Bspc}]
+    - [{h: Ctrl, t: Z}, {h: Shift, t: X}, C, V, {h: Alt, t: B}, {h: Alt, t: B}, M, ",", {h: Shift, t: .}, {h: Ctrl, t: Enter}]
+    - {h: Num1,   t: Space}
+    - {h: Sym2,  t: Tab}
+    - {h: Sym2, t: Delete}
+    - {h: Num1,   t: BSPC}
+  NUM1:
+    - ["=", "1", "2", "3", "-", "Vol+", "Vol-", "(", ")", "Repeat"]
+    - ["&", "4", "5", "6", "Repeat", "Home", "<-", "Up", "->", "'\""]
+    - ["Caps", "7", "8", "9", "0", "End", "[{", "Down", "]}", "/"]
+    - {t: Space, type: held}
+    - {h: TO3, t: Tab}
+    - {h: TO3, t: Delete}
+    - {t: BSPC, type: held}
+  SYM2:
+    - ["~", "!", "@", "#", "*", "[{", "]}", "(", ")", "Repeat"]
+    - ["&", "$", "%", "^", "Repeat", "Home", "-_", "=", "\\", ";:"]
+    - ["Back", "MS1", "MS3", "MS2", "Forward", "End", "_", "+", "|", Enter]
+    - {t: Space, h: TO3}
+    - {t: Tab, type: held}
+    - {t: Delete, type: held}
+    - {t: BSPC, h: TO3}
+  FN3:
+    - ["Boot", F1, F2, F3, F11, "BT 0", "BT 1", "BT 2", "Reset", "Boot"]
+    - [F11, F4, F5, F6, Reset, "BT Clear", "<-", "Up", "->", "Repeat"]
+    - [F12, F7, F8, F9, F10, "Output", null, "Down", null, Enter]
+    - Space
+    - Tab
+    - Delete
+    - BSPC
+  LOCK4:
+    - [Unlock, null, null, null, null, null, null, null, null, null]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - null
+    - Unlock
+    - null
+    - null
+combos:
+  - {p: [0, 11], k: "Soft Off", l: ["DEF"]}
+  - {p: [9, 18], k: "Soft Off", l: ["DEF"]}
+  - {p: [0, 1], k: ESC, l: ["DEF"]}
+  - {p: [0, 1, 2], k: CAPS, l: ["DEF"]}
+  - {p: [2, 3, 4], k: "Soft Off", l: ["DEF"]}
+  - {p: [7, 8, 9], k: "Out Tog", l: ["DEF"]}
+  - {p: [25, 26], k: WINR, l: ["DEF"]}
+  - {p: [23, 24],   k: WINL, l: ["DEF"]}
+  - {p: [8, 9],   k: WINL, l: ["DEF"]}
+  - {p: [8, 9], k: BSPC, l: ["DEF"]}
+  - {p: [3, 4], k: TO1, l: ["DEF"]}
+  - {p: [5, 6], k: TO2, l: ["DEF"]}
+  - {p: [31, 32], k: TO0, l: ["DEF"]}
+  - {p: [26, 27], k: "(", l: ["DEF"]}
+  - {p: [27, 28], k: ")", l: ["DEF"]}
+  - {p: [32, 33], k: TO3, l: ["DEF"]}
+  - {p: [4, 5], k: TO3, l: ["DEF"]}
+  - {p: [30, 31], k: TO3, l: ["DEF"]}
+  - {p: [6, 7], k: MKW1, l: ["DEF"]}
+  - {p: [13, 14], k: Repeat, l: ["DEF"]}
+  - {p: [12, 13], k: Enter, l: ["DEF"]}
+  - {p: [5, 15], k: "C(Home)", l: ["DEF"]}
+  - {p: [15, 25], k: "C(End)", l: ["DEF"]}
+  - {p: [22, 23], k: Delete, l: ["DEF"]}
+  - {p: [2, 3], k: BSPC, l: ["DEF"]}
+  - {p: [0, 10, 20], k: "Lock Layer", align: "left", offset: 0.25, l: ["DEF"]}
+  - {p: [0, 10], k: "+", l: ["DEF"]}
+  - {p: [1, 11], k: "!", l: ["DEF"]}
+  - {p: [2, 12], k: "@", l: ["DEF"]}
+  - {p: [3, 13], k: "#", l: ["DEF"]}
+  - {p: [4, 14], k: "$", l: ["DEF"]}
+  - {p: [5, 15], k: "%", l: ["DEF"]}
+  - {p: [6, 16], k: "^", l: ["DEF"]}
+  - {p: [7, 17], k: "&", l: ["DEF"]}
+  - {p: [8, 18], k: "*", l: ["DEF"]}
+  - {p: [9, 19], k: "-", l: ["DEF"]}
